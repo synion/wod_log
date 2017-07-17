@@ -5,3 +5,9 @@
   %p= @workout.weather
   %p= @workout.wod
   
+= link_to "Back", root_path 
+|
+= link_to "Edit", edit_workout_path
+|
+= link_to "Delete", workout_path, method: :delete, data: { confirm: "Are you sure?" }
+  
