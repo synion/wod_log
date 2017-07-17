@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2017-07-17 19:48:58
+  wod: MyText
+  mood: MyString
+  food: MyString
+  weather: MyString
+
+two:
+  date: 2017-07-17 19:48:58
+  wod: MyText
+  mood: MyString
+  food: MyString
+  weather: MyString
