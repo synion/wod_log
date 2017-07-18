@@ -1,0 +1,8 @@
+<div class="list-group middle">
+  <p><%= link_to "Add WOD", new_workout_path, class: "list-group-item" %></p>
+  <% @workouts.each do |workout| %>
+    <p><%= link_to "#{workout.date.strftime('%A %d.%m.%y')} WOD: #{workout.wod.truncate_words(5)}...", workout, class: "list-group-item" %></p>
+  <% end %>
+</div>
+
+

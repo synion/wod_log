@@ -2,7 +2,6 @@
 
 This application lets you log your workouts. Created with use of:
 
-- haml
 - devise
 - bootstrap
 - simple_form

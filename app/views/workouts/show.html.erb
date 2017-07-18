@@ -1,0 +1,10 @@
+  <p> <%= @workout.date.strftime('%A %d.%m.%y') %> </p>
+  <p> <%= @workout.mood %> </p>
+  <p> <%= @workout.food %> </p>
+  <p> <%= @workout.weather %> </p>
+  <p> <%= @workout.wod %> </p>
+  
+  <p> <%= link_to "Back", root_path %> </p>
+  <p> <%= link_to "Edit", edit_workout_path %> </p>
+  <p> <%= link_to "Delete", workout_path, method: :delete, data: { confirm: "Are you sure?" } %> </p>
+  
