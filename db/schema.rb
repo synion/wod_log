@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 20170717194858) do
 
   create_table "workouts", force: :cascade do |t|
-    t.datetime "date"
+    t.date     "date"
     t.text     "wod"
     t.string   "mood"
     t.string   "food"

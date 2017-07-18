@@ -4,7 +4,7 @@ class WorkoutsController < ApplicationController
   
   
   def index
-    @workouts = Workout.all.order("created_at DESC")
+    @workouts = Workout.all.order("date DESC")
   end
   
   def show
