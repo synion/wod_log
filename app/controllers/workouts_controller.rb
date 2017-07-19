@@ -4,7 +4,7 @@ class WorkoutsController < ApplicationController
   
   
   def index
-    @workouts = Workout.all.order("date DESC")
+    @workouts = Workout.all.order("date DESC").paginate(page: params[:page], per_page: 7)
   end
   
   def show

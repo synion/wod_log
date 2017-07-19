@@ -1,10 +1,49 @@
-  <p> <%= @workout.date.strftime('%A %d.%m.%y') %> </p>
-  <p> <%= @workout.mood %> </p>
-  <p> <%= @workout.food %> </p>
-  <p> <%= @workout.weather %> </p>
-  <p> <%= @workout.wod %> </p>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h1 class="panel-title"><%= @workout.date.strftime('%A %d.%m.%y') %></h1>
+    </div>
+  </div>
   
-  <p> <%= link_to "Back", root_path %> </p>
-  <p> <%= link_to "Edit", edit_workout_path %> </p>
-  <p> <%= link_to "Delete", workout_path, method: :delete, data: { confirm: "Are you sure?" } %> </p>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">How were you feeling</h3>
+    </div>
+    <div class="panel-body">
+      <%= @workout.mood %>
+    </div>
+  </div>
+  
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Food</h3>
+    </div>
+    <div class="panel-body">
+      <%= @workout.food %>
+    </div>
+  </div>
+  
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Weather</h3>
+    </div>
+    <div class="panel-body">
+      <%= @workout.weather %>
+    </div>
+  </div>
+  
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">WOD</h3>
+    </div>
+    <div class="panel-body">
+      <%= @workout.wod %>
+    </div>
+  </div>
+  
+  
+  
+  <%= link_to "Back", root_path, class:"btn btn-default" %>
+  <%= link_to "Edit", edit_workout_path, class:"btn btn-default" %>
+  <%= link_to "Delete", workout_path, method: :delete, data: { confirm: "Are you sure?" }, class:"btn btn-default" %>
+
   
