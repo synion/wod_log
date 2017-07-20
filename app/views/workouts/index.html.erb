@@ -8,7 +8,7 @@
     <p><%= link_to "#{workout.date.strftime('%A %d.%m.%y')} WOD: #{workout.wod}", workout, class: "list-group-item" %></p>
     <% end %>
   <% end %>
-    <%= will_paginate @workouts%>
+    <%= will_paginate @workouts if @workouts.any?%>
 </div>
 
 
