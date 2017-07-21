@@ -7,4 +7,4 @@ This application lets you log your workouts. Created with use of:
 - simple_form
 - motivation to become a RoR developer (seriously :)
 
-Deployed ot heroku.
+Deployed to heroku.
