@@ -6,7 +6,7 @@ class WorkoutsController < ApplicationController
   
   
   def index
-    @workouts = current_user.workouts.order("date DESC").paginate(page: params[:page], per_page: 7)
+    @workouts = current_user.workouts.order("date DESC").paginate(page: params[:page], per_page: 5)
    # @workouts = Workout.find(params[:@user]).order("date DESC").paginate(page: params[:page], per_page: 7)
   end
   
@@ -20,14 +20,16 @@ class WorkoutsController < ApplicationController
   def create
     @workout = current_user.workouts.build(workout_params)
     if @workout.save
-      flash[:success] = "New WOD was created."
-      redirect_to @workout
+      flash[:notice] = "New WOD was created."
+      redirect_to root_path
     else
-      flash[:danger] = "WOD was not created."
+      flash[:notice] = "WOD was not created."
       render 'new'
     end
   end
-  
+    
+    
+    
   def edit
   end
   

@@ -4,10 +4,11 @@
   <%= f.input :mood, label: "How were you feeling?", input_html: { class: 'form-control' } %>
   <%= f.input :food, label: "How were you eating that day? (Pizza again?)", input_html: { class: 'form-control' } %>
   <%= f.input :weather, label: "What was the weather like?", input_html: { class: 'form-control' } %>
-  <%= f.input :wod, required:true, label: "WOD", input_html: { class: 'form-control' } %>
-  <br/>
-  <%= f.button :submit %>
-  <%= link_to "Cancel", root_path, class:"btn btn-default pull-right" %>
+  <%= f.input :wod, required: true, label: "WOD", input_html: { class: 'form-control' } %>
+  <div class = "form-buttons">
+    <%= f.button :submit, class:"btn btn-default pull-left"%>
+    <%= link_to "Cancel", root_path, class:"btn btn-default pull-right" %>
+  </div>
   
 <% end %>
 

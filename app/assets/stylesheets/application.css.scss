@@ -18,30 +18,261 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-$white_opaque: rgba(250, 250, 250, .3);
+//Body and headers
 
-body {
-  background: #1F1C2C;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to left, #928DAB, #1F1C2C);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to left, #928DAB, #1F1C2C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+body{
+    background: url('froning.jpg') no-repeat center;
+    background-size:cover ;
+    font-family: 'Open Sans', sans-serif;
+    height: 100vh;
+    width: 100vw;
 }
 
 h1 {
-  font-size: 18px;
+    font-size: 36px;
+    color: lightgray;
+    font-weight: bold;
 }
 
 .container {
-  width: 45%;
-  max-width: 750px;
-  //background: rgba(250, 250, 250, 0.3);
-  margin: 0 auto 0 auto;
-
-  padding: 1em;
+    background: rgba(0, 0, 0, 0.7);
+    width: 35%;
+    max-width: 750px;
+    margin: 0 auto 0 80px;
+    float: left;
+    color: lightgray;
+    padding: 1em;
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
 }
+
+//Header
+
+.navbar-default {
+    background-color: rgba(255,255,255,0);
+    border-color: transparent;
+    font-weight: bold;
+    .navbar-brand {
+    color: lightgray;
+    border-radius: 4px;
+    }
+    
+    .navbar-nav > li > a {
+    color: lightgray;
+    border-radius: 4px;
+    }
+}
+
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+    color: lightgray;
+    background-color: rgba(255,255,255,0.3);
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    color: lightgray;
+    background-color: rgba(255,255,255,0.3);
+}
+
+// List groups
 
 .list-group {
-  margin-bottom: 0px;
-  padding-left: 0;
+    margin-bottom: 0px;
+    padding-left: 0;
+}
+
+a.list-group-item:hover, a.list-group-item:focus, button.list-group-item:hover, button.list-group-item:focus {
+    text-decoration: none;
+    color: lightgray;
+    font-weight: bold;
+    background-color: rgba(255,255,255,0.3);
+}
+
+a.list-group-item, button.list-group-item {
+    color: lightgray;
+    font-weight: bold;
+}
+
+.list-group-item {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    margin-bottom: -1px;
+    border: 0px solid #ddd;
+    background: rgba(255,255,255,0);
 }
 
 
+
+.label {
+    display: inline-block;
+    max-width: 100%;
+    margin: 15px auto 0 auto;
+    font-weight: bold;
+}
+
+// Forms
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+}
+
+input, button, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid;
+    margin-bottom: 20px;
+}
+
+input[type="submit"] {
+    -webkit-appearance: button;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 10px;
+}
+
+input[type="submit"]:hover {
+    outline: none;
+    background-color: rgba(255,255,255,0.3);
+}
+
+a {
+    color: lightgray;
+    text-decoration: none;
+    border-radius: 4px;
+    padding: 2px;
+}
+
+a:hover{
+    color: lightgray;
+    background: rgba(255,255,255,0.3);
+    text-decoration: none;
+}
+
+
+.form-control {
+    border:none;
+    border-bottom: 1px solid;
+    border-radius: 0px;
+    width: 100%;
+    background: transparent;
+    vertical-align: middle;
+    color: lightgray;
+}
+
+.form-control:focus {
+    -webkit-box-shadow: none;
+    border-color: lightgray;
+}
+
+option {
+    background:rgba(0,0,0,0.9);
+}
+
+// Panels
+
+.panel-default {
+    background: transparent;
+    border: none;
+}
+
+.panel-default > .panel-heading {
+    color: lightgray;
+    background-color: transparent;
+    border-color: lightgray;
+    border: none;
+    border-top: 1px solid;
+    border-radius: 0px;
+    padding: 20px 0 5px 0;
+}
+
+.panel-title {
+    color: lightgray;
+    background: transparent;
+    border-color: lightgray;
+    font-weight: bold;
+}
+
+.panel-body {
+    padding: 5px 0px 20px 10px;
+}
+
+// Buttons
+
+.btn-default {
+    color: lightgray;
+    background-color: transparent;
+    border-radius: 4px;
+    border: none;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px 15px 10px 15px;
+}
+
+.btn-default:hover {
+    color: lightgray;
+    background: rgba(255,255,255,0.3);
+    
+}
+
+.btn-default:active:hover, .btn-default:active:focus, 
+.btn-default:active.focus, .btn-default.active:hover, 
+.btn-default.active:focus, .btn-default.active.focus, 
+.open > .btn-default.dropdown-toggle:hover, 
+.open > .btn-default.dropdown-toggle:focus, 
+.open > .btn-default.dropdown-toggle.focus {
+    color: lightgray;
+    background: rgba(255,255,255,0.3);
+    outline: none;
+}
+
+.form-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+// Pagination
+
+.pagination > li > a, .pagination > li > span {
+    /* position: relative; */
+    float: left;
+    padding: 6px 12px;
+    /* line-height: 1.428571429; */
+    /* text-decoration: none; */
+    color: lightgray;
+    background: transparent;
+    border: none;
+    margin-left: -1px;
+}
+
+.pagination > .disabled > span, .pagination > .disabled > 
+span:hover, .pagination > .disabled > span:focus, .pagination > .disabled > a, 
+.pagination > .disabled > a:hover, .pagination > .disabled > a:focus {
+    color: gray;
+    background-color: transparent;
+    border: none;
+    cursor: not-allowed;
+}
+
+.pagination > .active > a, .pagination > .active > a:hover, 
+.pagination > .active > a:focus, .pagination > .active > span, 
+.pagination > .active > span:hover, .pagination > .active > span:focus {
+    z-index: 3;
+    color: lightgray;
+    background: transparent;
+    cursor: default;
+    border: 1px solid lightgray;
+}
+
+.pagination > li > a:hover, .pagination > li > a:focus, 
+.pagination > li > span:hover, .pagination > li > span:focus {
+    z-index: 2;
+    color: lightgray;
+    background-color: rgba(255,255,255,0.3);
+}

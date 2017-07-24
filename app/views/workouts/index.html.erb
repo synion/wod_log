@@ -1,5 +1,7 @@
-<div class="list-group middle">
-  <p><%= link_to "Add WOD", new_workout_path, class: "list-group-item" %></p>
+
+  <p><%= link_to "ADD WOD", new_workout_path, class:"btn btn-default" %></p>
+
+<div class="list-group middle">  
   
   <% @workouts.each do |workout| %>
     <%if workout.wod.split.size >5 %>
@@ -10,5 +12,3 @@
   <% end %>
     <%= will_paginate @workouts if @workouts.any?%>
 </div>
-
-
