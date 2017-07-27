@@ -49,7 +49,9 @@ class WorkoutsController < ApplicationController
   private
     
     def workout_params
-      params.require(:workout).permit(:date, :wod, :food, :mood, :weather)
+      params.require(:workout).permit(:date, :wod, :food, :mood, :weather, 
+                                      :strength, :weightlifting, :gymnastics,
+                                      :mobility, :other)
     end
     
     def find_wokrout

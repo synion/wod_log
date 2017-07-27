@@ -3,12 +3,14 @@
 
 <div class="list-group middle">  
   
+  <% if @workouts.any?%>
   <% @workouts.each do |workout| %>
-    <%if workout.wod.split.size >5 %>
+    <% if workout.wod.to_s.split.size >5 %>
     <p><%= link_to "#{workout.date.strftime('%A %d.%m.%y')} WOD: #{workout.wod.truncate_words(5)}", workout, class: "list-group-item" %></p>
     <% else %>
     <p><%= link_to "#{workout.date.strftime('%A %d.%m.%y')} WOD: #{workout.wod}", workout, class: "list-group-item" %></p>
     <% end %>
   <% end %>
     <%= will_paginate @workouts if @workouts.any?%>
+  <% end %>
 </div>
