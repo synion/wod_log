@@ -29,12 +29,12 @@
       <h3 class="panel-title">WOD:</h3>
     </div>
     <div class="panel-body">
-      <%= simple_format(@workout.weightlifting) unless @workout.weightlifting.blank? %>
-      <%= simple_format(@workout.strength) unless @workout.strength.blank? %>
-      <%= simple_format(@workout.gymnastics) unless @workout.gymnastics.blank? %>
-      <%= simple_format(@workout.wod) unless @workout.wod.blank? %>
-      <%= simple_format(@workout.mobility) unless @workout.mobility.blank? %>
-      <%= simple_format(@workout.other) unless @workout.other.blank? %>
+      <%= simple_format("Weightlifting:\n#{@workout.weightlifting}") unless @workout.weightlifting.blank? %>
+      <%= simple_format("Strength:\n#{@workout.strength}") unless @workout.strength.blank? %>
+      <%= simple_format("Gymanstics:\n#{@workout.gymnastics}") unless @workout.gymnastics.blank? %>
+      <%= simple_format("WOD: \n#{@workout.wod}") unless @workout.wod.blank? %>
+      <%= simple_format("Mobility:\n#{@workout.mobility}") unless @workout.mobility.blank? %>
+      <%= simple_format("Other:\n#{@workout.other}") unless @workout.other.blank? %>
     </div>
   </div>
   

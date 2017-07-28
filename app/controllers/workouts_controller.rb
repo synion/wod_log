@@ -1,20 +1,20 @@
 class WorkoutsController < ApplicationController
   
-  before_action :find_wokrout, only: [:show, :edit, :update, :destroy]
+  before_action :find_workout, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
   before_action :correct_user?, only: [:show, :edit, :update, :destroy]
   
   
   def index
-    @workouts = current_user.workouts.order("date DESC").paginate(page: params[:page], per_page: 5)
-   # @workouts = Workout.find(params[:@user]).order("date DESC").paginate(page: params[:page], per_page: 7)
+    @workouts = current_user.workouts.search(params[:search]).order("date DESC").paginate(page: params[:page], per_page: 5)
+    #@workouts = Workout.find(params[:@user]).order("date DESC").paginate(page: params[:page], per_page: 7)
   end
   
   def show
   end
   
   def new
-    @workout = current_user.workouts.build
+    @workout = current_user.workouts.new
   end
   
   def create
@@ -54,7 +54,7 @@ class WorkoutsController < ApplicationController
                                       :mobility, :other)
     end
     
-    def find_wokrout
+    def find_workout
       @workout = Workout.find(params[:id])
     end
     

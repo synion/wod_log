@@ -5,11 +5,7 @@
   
   <% if @workouts.any?%>
   <% @workouts.each do |workout| %>
-    <% if workout.wod.to_s.split.size >5 %>
-    <p><%= link_to "#{workout.date.strftime('%A %d.%m.%y')} WOD: #{workout.wod.truncate_words(5)}", workout, class: "list-group-item" %></p>
-    <% else %>
-    <p><%= link_to "#{workout.date.strftime('%A %d.%m.%y')} WOD: #{workout.wod}", workout, class: "list-group-item" %></p>
-    <% end %>
+    <p><%= link_to "#{workout.date.strftime('%A %d.%m.%y')} (#{workout.display_workout})", workout, class: "list-group-item" %></p>
   <% end %>
     <%= will_paginate @workouts if @workouts.any?%>
   <% end %>

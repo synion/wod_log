@@ -3,7 +3,15 @@
   <ul class="nav navbar-nav">
     
     <% if user_signed_in? %>
-      <li><%= link_to "ADD WOD", new_workout_path %></li>
+      
+      
+      <li><%= form_tag workouts_path, method: :get do %>
+            <%= text_field_tag :search, params[:search], placeholder: "Find your WOD" %>
+            <button type="aubmit" class="btn btn-default" aria-label="Left Align">
+            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+            </button>
+          <% end %>
+      </li>
       <li><%= link_to "Your Profile", current_user %></li>
       <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
     <% end %>
