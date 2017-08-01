@@ -1,9 +1,29 @@
 <%= simple_form_for ([current_user, current_user.personal_bests.build]) do |f| %>
-  <%= f.input :date, input_html: { class: 'form-control' } %>
-  <%= f.input :exercise, label: "Exercise?", input_html: { class: 'form-control' } %>
-  <%= f.input :score, label: "Score", input_html: { class: 'form-control' } %>
+<h3> Add your PR: </h3>
+  <table class="table">
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Exercise</th>
+      <th>Score</th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= f.input :date, label: false, input_html: { class: 'form-control' } %></td>
+      <td><%= f.input :exercise, label: false, input_html: { class: 'form-control' } %></td>
+      <td><%= f.input :score, label: false, input_html: { class: 'form-control' } %></td>
+      <td><div class = "form-buttons">
+          <%= f.button :submit, class:"btn btn-default"%>
+          </div>
+      </td>
+    </tr>
+   </tbody>
+   </table>
+ <% end %>
+    
+
   
-  <div class = "form-buttons">
-    <%= f.button :submit, class:"btn btn-default pull-left"%>
-  </div>
-<% end %>
+  
+  

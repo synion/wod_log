@@ -1,9 +1,32 @@
-<% current_user.personal_bests.each do |personal_best| %>
-  <p><%= personal_best.date %>
-  <%= personal_best.exercise %>
-  <%= personal_best.score %>
-  
-  <%= link_to "Edit", edit_user_personal_best_path(current_user.id, personal_best), class:"btn btn-default" %>
-  <%= link_to "Delete", user_personal_best_path(current_user.id, personal_best), method: :delete, data: { confirm: "Are you sure?" }, class:"btn btn-default" %>
-  </p>
+
+<% if current_user.personal_bests.any? %>
+  <br>
+  <h2> Your personal bests: </h2>
+  <table class="table">
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Exercise</th>
+      <th>Score</th>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <% current_user.personal_bests.each do |personal_best| %> 
+    <tr>
+      <td><%= personal_best.date %></td>
+      <td><%= personal_best.exercise %></td>
+      <td><%= personal_best.score %></td>
+      <td><%= link_to "Edit", edit_user_personal_best_path(current_user.id, personal_best), class:"btn btn-default" %></td>
+      <td><%= link_to "Delete", user_personal_best_path(current_user.id, personal_best), 
+          method: :delete, data: { confirm: "Are you sure?" }, class:"btn btn-default" %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
 <% end %>
+
+
+
+

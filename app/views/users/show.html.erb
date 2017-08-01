@@ -1,12 +1,18 @@
 <%= render 'workout_count' %>
-
-<% if current_user.workouts.any? %>
-  <%= column_chart current_user.workouts.group_by_week(:date).count,  colors: "gray"%>
-  <%= render 'pie_chart' %>
-<% end %>
-
-  <%= render 'personal_bests/personal_bests' if current_user.personal_bests.any? %>
-
+  
+  <chart>
+  <% if current_user.workouts.any? %>
+    <%= line_chart current_user.workouts.group_by_week(:date).count, 
+    title: "Trainings per week", id: "count-chart", width: "50%", 
+    library: {defaultFontColor: '#d3d3d3'} %>
+    <%= render 'pie_chart' %>
+  <% end %>
+  </chart>
+  <div>
+  <%= render 'personal_bests/personal_bests' %>
   <%= render 'personal_bests/form' %>
+  </div>
+  
+  
+<p><%= link_to "Edit your account info.", edit_user_registration_path, class: "btn btn-default btn-block" %></p>
 
-<%= link_to "Edit your account info.", edit_user_registration_path %>

@@ -79,14 +79,23 @@ h1 {
     background-color: rgba(255,255,255,0);
     border-color: transparent;
     font-weight: bold;
+    
+    form {
+    margin-top: 7px;
+    }
+    
     .navbar-brand {
-    color: lightgray;
-    border-radius: 4px;
+    height: inherit;
     }
     
     .navbar-nav > li > a {
     color: lightgray;
     border-radius: 4px;
+    }
+    
+    img {
+    display: block;
+    height: 50px;
     }
 }
 
@@ -98,6 +107,17 @@ h1 {
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
     color: lightgray;
     background-color: rgba(255,255,255,0.3);
+}
+
+.navbar-right {
+    float: right !important;
+    margin-right: -15px;
+    margin: 15px auto 15px auto;
+}
+
+.navbar-left {
+    float: left !important;
+    margin-left: 15px;
 }
 
 // List groups
@@ -201,6 +221,10 @@ option {
     background:rgba(0,0,0,0.9);
 }
 
+.form-inline {
+    display: inline-flex;
+}
+
 // Panels
 
 .panel-default {
@@ -233,12 +257,12 @@ option {
 
 .btn-default {
     color: lightgray;
-    background-color: transparent;
+    background-color: rgba(255,255,255,0.1);
     border-radius: 4px;
     border: none;
     font-weight: bold;
     font-size: 16px;
-    padding: 10px 15px 10px 15px;
+    padding: 6px;
 }
 
 .btn-default:hover {
@@ -314,4 +338,11 @@ span:hover, .pagination > .disabled > span:focus, .pagination > .disabled > a,
 wod { 
     display: none;
 }
+
+// Charts
+
+chart {
+    display: flex;
+}
+
 
