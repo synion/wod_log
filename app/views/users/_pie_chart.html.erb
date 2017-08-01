@@ -1,0 +1,9 @@
+<%= pie_chart({"Weightlifting" => current_user.how_many?('weightlifting'),
+               "strength" => current_user.how_many?('strength'),
+               "Gymnastics" => current_user.how_many?('gymnastics'),
+               "WOD" => current_user.how_many?('wod'),
+               "Mobility" => current_user.how_many?('mobility'),
+               "Other" => current_user.how_many?('other')},
+               colors: [ '#bc0f09', '#7085e5', '#b143c1', '#f9d220', '#66e291', '#256324'])%>
+               
+  

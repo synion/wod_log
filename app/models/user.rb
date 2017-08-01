@@ -5,4 +5,9 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
          
   has_many :workouts, dependent: :destroy
+  has_many :personal_bests, dependent: :destroy
+  
+  def how_many?(type)
+    eval("workouts.where.not(#{type}: \"\").count")
+  end
 end

@@ -7,7 +7,6 @@ class WorkoutsController < ApplicationController
   
   def index
     @workouts = current_user.workouts.search(params[:search]).order("date DESC").paginate(page: params[:page], per_page: 5)
-    #@workouts = Workout.find(params[:@user]).order("date DESC").paginate(page: params[:page], per_page: 7)
   end
   
   def show

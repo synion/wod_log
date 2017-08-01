@@ -1,0 +1,9 @@
+<%= simple_form_for ([current_user, @personal_best]) do |f| %>
+  <%= f.input :date, input_html: { class: 'form-control' } %>
+  <%= f.input :exercise, label: "Exercise?", input_html: { class: 'form-control' } %>
+  <%= f.input :score, label: "Score", input_html: { class: 'form-control' } %>
+  
+  <div class = "form-buttons">
+    <%= f.button :submit, class:"btn btn-default pull-left"%>
+  </div>
+<% end %>

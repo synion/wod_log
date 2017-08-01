@@ -1,0 +1,9 @@
+<% current_user.personal_bests.each do |personal_best| %>
+  <p><%= personal_best.date %>
+  <%= personal_best.exercise %>
+  <%= personal_best.score %>
+  
+  <%= link_to "Edit", edit_user_personal_best_path(current_user.id, personal_best), class:"btn btn-default" %>
+  <%= link_to "Delete", user_personal_best_path(current_user.id, personal_best), method: :delete, data: { confirm: "Are you sure?" }, class:"btn btn-default" %>
+  </p>
+<% end %>

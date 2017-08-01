@@ -1,33 +1,28 @@
+<h2><%= @workout.date.strftime('%A %d.%m.%y') %></h2>
   
-    
-  <h2><%= @workout.date.strftime('%A %d.%m.%y') %></h2>
-   
-  
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h3 class="panel-title">How were you feeling:</h3>
-    </div>
-    <div class="panel-body">
-      <%= @workout.mood.empty? ? "No info" : @workout.mood %>
-    </div>
-  
-    <div class="panel-heading">
-      <h3 class="panel-title">Food:</h3>
-    </div>
-    <div class="panel-body">
-      <%= @workout.food.empty? ? "No info" : @workout.food %>
-    </div>
+<div>
+<div class="panel panel-default">
+  <div class="panel-heading">Mood</div>
+  <div class="panel-body">
+    <%= @workout.mood.blank? ? "No info" : @workout.mood %>
+  </div>
+</div>
 
-    <div class="panel-heading">
-      <h3 class="panel-title">Weather:</h3>
-    </div>
-    <div class="panel-body">
-      <%= @workout.weather.empty? ? "No info" : @workout.weather %>
-    </div>
+<div class="panel panel-default">
+  <div class="panel-heading">Food</div>
+  <div class="panel-body">
+    <%= @workout.food.blank? ? "No info" : @workout.mood %>
+  </div>
+</div>
 
-    <div class="panel-heading">
-      <h3 class="panel-title">WOD:</h3>
-    </div>
+<div class="panel panel-default">
+  <div class="panel-heading">Weather</div>
+  <div class="panel-body">
+    <%= @workout.weather.blank? ? "No info" : @workout.mood %>
+  </div>
+</div>
+</span> 
+
     <div class="panel-body">
       <%= simple_format("Weightlifting:\n#{@workout.weightlifting}") unless @workout.weightlifting.blank? %>
       <%= simple_format("Strength:\n#{@workout.strength}") unless @workout.strength.blank? %>
@@ -38,8 +33,10 @@
     </div>
   </div>
   
+
+  
   <%= link_to "Back", root_path, class:"btn btn-default" %>
   <%= link_to "Edit", edit_workout_path, class:"btn btn-default" %>
   <%= link_to "Delete", workout_path, method: :delete, data: { confirm: "Are you sure?" }, class:"btn btn-default" %>
-
+</div>
   

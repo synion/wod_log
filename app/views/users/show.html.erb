@@ -1,2 +1,12 @@
-<%= @user.email %>
-<%= @user.workouts.count %>
+<%= render 'workout_count' %>
+
+<% if current_user.workouts.any? %>
+  <%= column_chart current_user.workouts.group_by_week(:date).count,  colors: "gray"%>
+  <%= render 'pie_chart' %>
+<% end %>
+
+  <%= render 'personal_bests/personal_bests' if current_user.personal_bests.any? %>
+
+  <%= render 'personal_bests/form' %>
+
+<%= link_to "Edit your account info.", edit_user_registration_path %>

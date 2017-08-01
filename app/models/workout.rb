@@ -20,7 +20,7 @@ class Workout < ApplicationRecord
     t << "wod" unless wod.blank?
     t << "mobility" unless mobility.blank?
     t << "other" unless other.blank?
-    t.join(", ").to_s
+    t.empty? ? "no info about workout" : t.join(", ").to_s
   end
   
   

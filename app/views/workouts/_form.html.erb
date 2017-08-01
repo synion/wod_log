@@ -4,10 +4,7 @@
   <%= f.input :food, label: "How were you eating that day? (Pizza again?)", input_html: { class: 'form-control' } %>
   <%= f.input :weather, label: "What was the weather like?", input_html: { class: 'form-control' } %>
   
-  
   <%= render 'buttons' %>
-  
-  
   
     <section>
     <wod id = "weightlifting"><%= f.input :weightlifting, label: "Weightlifting", 
@@ -22,7 +19,7 @@
     input_html: { class: 'form-control'} %></wod>
     <wod id = "other"><%= f.input :other, label: "Other", 
     input_html: { class: 'form-control'} %></wod>
-  </section>
+    </section>
   
   <div class = "form-buttons">
     <%= f.button :submit, class:"btn btn-default pull-left"%>

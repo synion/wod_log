@@ -1,0 +1,8 @@
+<h3><%= case current_user.workouts.count
+            when 0 
+              "You didn't add any trainings yet."
+            when 1
+              "You have completed your first training! Way to go!"
+            else
+              "You've done #{current_user.workouts.count} trainigs. Keep it up!" 
+          end %></h3>
