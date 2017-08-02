@@ -1,0 +1,41 @@
+<h2> Workout description:</h2>
+<br>
+  <table class="table">
+  <thead>
+    <tr>
+      <% unless @workout.weightlifting.blank? %><th>Weightlifting</th><% end %>
+      <% unless @workout.strength.blank? %><th>Strength</th><% end %>
+      <% unless @workout.gymnastics.blank? %><th>Gymanstics</th><% end %>
+      <% unless @workout.wod.blank? %><th>WOD</th><% end %>
+      <% unless @workout.mobility.blank? %><th>Mobility</th><% end %>
+      <% unless @workout.other.blank? %><th>Other</th><% end %>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <% unless @workout.weightlifting.blank? %>
+        <td><%= simple_format("#{@workout.weightlifting}") %></td>
+      <% end %>
+      
+      <% unless @workout.strength.blank? %>
+        <td><%= simple_format("#{@workout.strength}") %></td>
+      <% end %>
+      
+      <% unless @workout.gymnastics.blank? %>
+        <td><%= simple_format("#{@workout.gymnastics}") %></td>
+      <% end %>
+      
+      <% unless @workout.wod.blank? %>
+        <td><%= simple_format("#{@workout.wod}") %></td>
+      <% end %>
+      
+      <% unless @workout.mobility.blank? %>
+        <td><%= simple_format("#{@workout.mobility}") %></td>
+      <% end %>
+      
+      <% unless @workout.other.blank? %>
+        <td><%= simple_format("#{@workout.other}") %></td>
+      <% end %>
+    </tr>
+   </tbody>
+  </table>

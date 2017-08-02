@@ -1,9 +1,24 @@
+<h1> NEW WORKOUT </h1>
+<br>
 <%= simple_form_for @workout do |f| %>
-  <%= f.input :date, input_html: { class: 'form-control' } %>
-  <%= f.input :mood, label: "How were you feeling?", input_html: { class: 'form-control' } %>
-  <%= f.input :food, label: "How were you eating that day? (Pizza again?)", input_html: { class: 'form-control' } %>
-  <%= f.input :weather, label: "What was the weather like?", input_html: { class: 'form-control' } %>
-  
+  <table class="table">
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Mood</th>
+      <th>Food</th>
+      <th>Weather</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= f.input :date, label: false, input_html: { class: 'form-control' } %></td>
+      <td><%= f.input :mood, label: false, placeholder: "You ok?", input_html: { class: 'form-control' } %></td>
+      <td><%= f.input :food, label: false, placeholder: "Pizza again?", input_html: { class: 'form-control' } %></td>
+      <td><%= f.input :weather, label: false, placeholder: "Sunny enough?", input_html: { class: 'form-control' } %></td>
+    </tr>
+   </tbody>
+   </table>
   <%= render 'buttons' %>
   
     <section>

@@ -80,9 +80,14 @@ h1 {
     border-color: transparent;
     font-weight: bold;
     
-    form {
-    margin-top: 7px;
-    }
+    .btn-default {
+    
+    background-color: rgba(255, 255, 255, 0);
+    
+    padding: 15px 15px 12px 15px;
+    margin-top: 0px;
+}
+    
     
     .navbar-brand {
     height: inherit;
@@ -112,7 +117,7 @@ h1 {
 .navbar-right {
     float: right !important;
     margin-right: -15px;
-    margin: 15px auto 15px auto;
+    margin: 3px auto 15px auto;
 }
 
 .navbar-left {
@@ -158,6 +163,10 @@ a.list-group-item, button.list-group-item {
 }
 
 // Forms
+
+select{
+    margin-bottom: 2px;
+}
 
 input:focus, textarea:focus, select:focus {
     outline: none;
@@ -255,6 +264,16 @@ option {
 
 // Buttons
 
+.glyphicon{
+    font-size: 12px;
+    top: 0px;
+}
+
+.glyphicon-search{
+    font-size: 18px;
+    top: 0px;
+}
+
 .btn-default {
     color: lightgray;
     background-color: rgba(255,255,255,0.1);
@@ -263,6 +282,7 @@ option {
     font-weight: bold;
     font-size: 16px;
     padding: 6px;
+    margin: 5px;
 }
 
 .btn-default:hover {
@@ -290,6 +310,12 @@ option {
 
 .btn-form {
 font-size: 12px;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 // Pagination
@@ -344,5 +370,38 @@ wod {
 chart {
     display: flex;
 }
+
+// Tables
+.table > thead > tr > th, .table > thead > tr > td, .table > tbody > tr > th,
+.table > tbody > tr > td, .table > tfoot > tr > th, .table > tfoot > tr > td {
+    padding: 8px;
+    line-height: 1.428571429;
+    vertical-align: initial;
+    border-top: 1px solid #ddd;
+}
+
+.wod-table {
+    table-layout: fixed;
+    th{
+        text-align: center;
+    }
+    
+    tr{
+        text-align: center;
+    }
+}
+
+//Login
+.login {
+    display: grid;
+    justify-content: center;
+}
+
+//WOD
+
+.wod-title {
+    font-weight: bold;
+}
+
 
 

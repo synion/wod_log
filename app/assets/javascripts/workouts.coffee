@@ -4,32 +4,31 @@
  
 $(document).on "click", "#weightliftingButton", (e)->
   $('#weightlifting').toggle()
-  $('#weightliftingButton').toggleClass('glyphicon glyphicon-minus')
-  #$('#workout_strength').val('')
+  $("#weightliftingGlyphicon").toggleClass('glyphicon glyphicon-minus')
   
 $(document).on "click", "#strengthButton", (e)->
   $('#strength').toggle()
-  $('#strengthButton').toggleClass('glyphicon glyphicon-minus')
+  $('#strengthGlyphicon').toggleClass('glyphicon glyphicon-minus')
   #$('#workout_strength').val('')
   
 $(document).on "click", "#gymnasticsButton", (e)->
   $('#gymnastics').toggle()
-  $('#gymnasticsButton').toggleClass('glyphicon glyphicon-minus')
+  $('#gymnasticsGlyphicon').toggleClass('glyphicon glyphicon-minus')
   #$('#workout_gymnastics').val('')
   
 $(document).on "click", "#wodButton", (e)->
   $('#wod').toggle()
-  $('#wodButton').toggleClass('glyphicon glyphicon-minus')
+  $('#wodGlyphicon').toggleClass('glyphicon glyphicon-minus')
   #$('#workout_wod').val('')
   
 $(document).on "click", "#mobilityButton", (e)->
   $('#mobility').toggle()
-  $('#mobilityButton').toggleClass('glyphicon glyphicon-minus')
+  $('#mobilityGlyphicon').toggleClass('glyphicon glyphicon-minus')
   #$('#workout_mobility').val('')
   
 $(document).on "click", "#otherButton", (e)->
   $('#other').toggle()
-  $('#otherButton').toggleClass('glyphicon glyphicon-minus')
+  $('#otherGlyphicon').toggleClass('glyphicon glyphicon-minus')
   #$('#workout_other').val('')
   
   
